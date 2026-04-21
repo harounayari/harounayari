@@ -6,6 +6,26 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://www.harounayari.com/portfolio.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.harounayari.com/publications.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.harounayari.com/methodology.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.harounayari.com/contact.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://www.harounayari.com/work-elhadhra.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
