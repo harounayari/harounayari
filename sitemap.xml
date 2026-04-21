@@ -66,3 +66,18 @@
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
+  <url>
+    <loc>https://www.harounayari.com/book-living-archive.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.harounayari.com/book-illiterate-body.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.harounayari.com/book-revealing-yourself.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Living Archive - Haroun Ayari</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0E0E0C;--bg-card:#1A1A18;--text:#F5F5F0;--text-light:#B8B8B0;--accent:#52B788;--accent-hover:#449973;--border:#2A2A28;--font-heading:'Playfair Display',Georgia,serif;--font-body:'Outfit',Helvetica,Arial,sans-serif;--radius:8px;--transition:0.3s ease}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7}
+        a{color:var(--accent);text-decoration:none}
+        nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(14,14,12,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+        .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+        .logo{font-family:var(--font-heading);font-size:1.5rem;font-weight:600;color:var(--text);letter-spacing:1px}
+        .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+        .nav-links a{font-size:0.9rem;color:var(--text-light);text-transform:uppercase;letter-spacing:1.5px;transition:color var(--transition)}
+        .nav-links a:hover{color:var(--accent)}
+        .mobile-menu{display:none;background:none;border:none;font-size:1.5rem;color:var(--text);cursor:pointer}
+        .wrap{max-width:1100px;margin:0 auto;padding:0 5%}
+        .book-layout{display:grid;grid-template-columns:320px 1fr;gap:5rem;align-items:start;padding:9rem 0 6rem}
+        .cover-col{position:sticky;top:100px}
+        .cover-col img{width:100%;border-radius:var(--radius);box-shadow:0 16px 50px rgba(0,0,0,0.6);display:block}
+        .buy-btn{display:block;margin-top:1.5rem;padding:0.9rem;background:var(--accent);color:#0E0E0C;border-radius:var(--radius);font-weight:600;text-align:center;font-size:0.95rem;transition:background var(--transition)}
+        .buy-btn:hover{background:var(--accent-hover);opacity:1}
+        .back{display:inline-flex;align-items:center;gap:0.4rem;color:var(--text-light);font-size:0.85rem;margin-top:1.2rem;transition:color var(--transition)}
+        .back:hover{color:var(--accent)}
+        .text-col{}
+        .book-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:1rem;display:block}
+        .book-title{font-family:var(--font-heading);font-size:2.6rem;font-weight:500;line-height:1.15;margin-bottom:0.6rem}
+        .book-sub{font-family:var(--font-heading);font-style:italic;font-size:1.1rem;color:var(--text-light);margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+        .hook{font-family:var(--font-heading);font-style:italic;font-size:1.25rem;color:var(--text);line-height:1.7;margin-bottom:2rem}
+        .body-text p{color:var(--text-light);font-size:1rem;line-height:1.9;margin-bottom:1.4rem}
+        .section-title{font-family:var(--font-heading);font-size:1.3rem;color:var(--text);margin:2.5rem 0 1.2rem;padding-top:1rem}
+        .feature-list{list-style:none;margin-bottom:2rem}
+        .feature-list li{display:flex;gap:1rem;margin-bottom:1.2rem;color:var(--text-light);font-size:0.95rem;line-height:1.7}
+        .feature-list li::before{content:"·";color:var(--accent);font-size:1.4rem;line-height:1.2;flex-shrink:0}
+        .feature-list strong{color:var(--text);font-weight:500}
+        .audience-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;margin-top:2.5rem}
+        .audience-box h4{font-family:var(--font-heading);font-size:1.1rem;margin-bottom:1rem;color:var(--text)}
+        .audience-box p{color:var(--text-light);font-size:0.95rem;line-height:1.7}
+        footer{background:var(--bg-card);padding:2.5rem 0;text-align:center;border-top:1px solid var(--border);margin-top:0}
+        footer a{color:var(--accent)}
+        @media(max-width:900px){.book-layout{grid-template-columns:1fr;gap:3rem;padding:8rem 0 4rem}.cover-col{position:static}.cover-col img{max-width:240px;margin:0 auto}.book-title{font-size:2rem}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--bg);padding:1.5rem;border-bottom:1px solid var(--border)}.mobile-menu{display:block}}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="wrap nav-inner">
+            <a href="index.html" class="logo">Haroun Ayari</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        <div class="book-layout">
+            <div class="cover-col">
+                <img src="living-archive.jpg" alt="The Living Archive Book Cover">
+                <a href="https://www.amazon.fr/Living-Archive-Practice-Presence-Embodiment-ebook/dp/B0G1YRT319" class="buy-btn" target="_blank">Find on Amazon</a>
+                <a href="publications.html" class="back">← Back to Publications</a>
+            </div>
+            <div class="text-col">
+                <span class="book-label">The Ayari Trilogy · Volume I</span>
+                <h1 class="book-title">The Living Archive</h1>
+                <p class="book-sub">A Dancer's Practice of Presence, Memory, and Creative Embodiment</p>
+
+                <p class="hook">Are you ready to listen to what your body is trying to tell you?</p>
+
+                <div class="body-text">
+                    <p>The dancer's body is often viewed merely as a technical instrument. Haroun Ayari, choreographer and researcher, proposes a radically different vision: your body is a Living Archive. It is a dynamic repository where not only your technical steps are engraved, but also your joys, fears, emotional wounds, and full creative potential.</p>
+                    <p>This book is a profound guide for anyone seeking to understand the inseparable link between memory, emotion, and authentic movement.</p>
+                </div>
+
+                <h3 class="section-title">Unlock the Secrets of the Living Archive</h3>
+                <ul class="feature-list">
+                    <li><div><strong>The Remembering Body:</strong> Explore the fascinating science behind body memory — how fascia, mirror neurons, and the limbic system encode experience long before the mind consciously recalls it.</div></li>
+                    <li><div><strong>The Aesthetic of Presence:</strong> Learn to transform your memories into vibrant Presence on stage or in life. Understand how the convergence of your history and technique creates genuine authenticity in your movement.</div></li>
+                    <li><div><strong>Resilience Through Rewriting:</strong> Master the somatic methodologies to not only heal past injuries but to actively rewrite patterns of tension. Develop a practice that ensures longevity and creative renewal.</div></li>
+                    <li><div><strong>Creation and Intuition:</strong> Discover how improvisation serves as a direct gateway to this archive, allowing movement to emerge from intuition and embodied wisdom rather than conscious effort.</div></li>
+                    <li><div><strong>A Pedagogy of Listening:</strong> Concrete tools for educators and dancers to teach and practice not with the body, but from the body's deep, stored knowledge.</div></li>
+                </ul>
+
+                <div class="audience-box">
+                    <h4>Who is this book for?</h4>
+                    <p>Whether you are a professional dancer seeking expressive depth, a student exploring the body-mind connection, a choreographer looking for authentic inspiration, or a somatic practitioner (Yoga, Pilates, Feldenkrais) eager to integrate emotional memory into your work — The Living Archive is your essential guide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wrap">
+            <div style="display:flex;gap:2rem;justify-content:center;margin-bottom:1rem;flex-wrap:wrap">
+                <a href="portfolio.html">Portfolio</a>
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p style="color:var(--text-light);font-size:0.85rem">Haroun Ayari © <span id="year"></span></p>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
